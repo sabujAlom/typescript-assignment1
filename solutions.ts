@@ -1,14 +1,9 @@
 
-// problem 1
+
 function multiplyValue(value: number, multiplier?: number): number {
   return value * (multiplier ?? 2);
 }
 
-// console.log(multiplyValue(5, 3));
-// console.log(multiplyValue(5));
-// console.log(multiplyValue(5, 0));
-
-//problem: 02
 function processInput(value: string | number | boolean): string | number {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
@@ -20,12 +15,7 @@ function processInput(value: string | number | boolean): string | number {
 
   return value ? "Active" : "Inactive";
 }
-// console.log(processInput("  HELLO WORLD  "));
-// console.log(processInput(5));
-// console.log(processInput(true));
-// console.log(processInput(false));
 
-// problem: 03
 function formatCoordinate(
   coordinate: readonly [number, number, string]
 ): string {
@@ -33,17 +23,11 @@ function formatCoordinate(
 
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
-// console.log(formatCoordinate([23.8103, 90.4125, "Dhaka"]));
 
-
-// problem : 04
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.flat();
 }
-// console.log(concatenateArrays([1, 2], [3, 4]));
-// console.log(concatenateArrays(["Hello"], ["World", "TypeScript"]));
 
-// problem: 05
 interface Course {
   title: string;
   students: number;
@@ -60,7 +44,6 @@ function getPopularCourses(
   );
 }
 
-// problem: 06
 function pluckValues<T, K extends keyof T>(
   items: T[],
   key: K
@@ -68,7 +51,7 @@ function pluckValues<T, K extends keyof T>(
   return items.map((item) => item[key]);
 }
 
-// problem : 07
+
 class Employee {
   protected name: string;
   private baseSalary: number;
@@ -98,7 +81,7 @@ class Manager extends Employee {
 
 
 
-// problem: 08
+
 function validateAgeAsync(age: number): Promise<string> {
   return new Promise<string>((resolve, reject) => {
     if (age < 18) {
